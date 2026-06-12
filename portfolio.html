@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gowtham — 1st Year BTech CSE Student | Engineering e-Portfolio showcasing projects, technical skills, DevLog, and roadmap. Building efficient systems from the ground up.">
+  <meta name="keywords" content="Gowtham, BTech CSE, Computer Science, Portfolio, Developer, DSA, Python, C, Java, GitHub">
+  <meta name="author" content="Gowtham">
+  <title>Gowtham | Engineering Portfolio · CS Scholar</title>
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Typography: JetBrains Mono (code) + Inter (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons: Lucide -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       CURSOR GLOW (follows mouse)
+       ═══════════════════════════════════════ -->
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+       ═══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-bracket">&lt;</span>
+        <span class="brand-name">Gowtham</span>
+        <span class="brand-bracket"> /&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#stack" class="nav-link">Stack</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#devlog" class="nav-link">DevLog</a></li>
+        <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+        <li><a href="#contact" class="nav-link">Connect</a></li>
+      </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 1 — HERO / SPLASH
+       ═══════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <!-- Animated background grid -->
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+
+    <!-- Floating code orbs -->
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <!-- Terminal greeting -->
+      <div class="terminal-bar" id="terminal-bar">
+        <div class="terminal-dots" aria-hidden="true">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <span class="terminal-title">gowtham@dev ~ bash</span>
+      </div>
+      <div class="terminal-prompt">
+        <span class="prompt-prefix">$ </span>
+        <span class="prompt-text" id="typed-text"></span>
+        <span class="cursor-blink" aria-hidden="true">▋</span>
+      </div>
+
+      <!-- Name display -->
+      <div class="hero-name-block" id="hero-name-block">
+        <span class="hero-name-label">Hi, I'm</span>
+        <div class="hero-name-wrap">
+          <span class="hero-name-text" id="hero-name-text">Gowtham</span>
+          <span class="hero-name-shimmer" aria-hidden="true">Gowtham</span>
+        </div>
+        <span class="hero-name-role">
+          <span class="role-dot"></span>CS Engineer · Problem Solver · Builder
+        </span>
+      </div>
+
+      <!-- Main headline -->
+      <h1 class="hero-headline">
+        Building efficient systems<br>
+        <span class="headline-accent">from the ground up.</span>
+      </h1>
+
+      <!-- Value proposition -->
+      <p class="hero-value-prop">
+        I'm Gowtham — a 1st-year BTech CSE student who thinks in algorithms, 
+        designs for correctness, and writes code that scales. My foundation is rooted in 
+        core computer science principles: memory management, asymptotic complexity, and the 
+        elegant interplay of data structures and logic.
+      </p>
+      <p class="hero-value-prop-secondary">
+        Every line I write is a deliberate engineering decision. I'm not building 
+        projects — I'm building intuition.
+      </p>
+
+      <!-- Status badges -->
+      <div class="hero-badges">
+        <span class="badge badge-active">
+          <span class="badge-pulse"></span>
+          Open to Opportunities
+        </span>
+        <span class="badge badge-info">🎓 BTech CSE · Year 1</span>
+        <span class="badge badge-info">📍 India</span>
+      </div>
+
+      <!-- CTA buttons -->
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary" id="hero-projects-btn">
+          <i data-lucide="folder-code"></i> View My Work
+        </a>
+        <a href="#contact" class="btn btn-ghost" id="hero-contact-btn">
+          <i data-lucide="send"></i> Let's Connect
+        </a>
+        <a href="https://github.com/Gowtham614941" target="_blank" rel="noopener" class="btn btn-icon" title="GitHub" id="hero-github-btn">
+          <i data-lucide="github"></i>
+        </a>
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="scroll-cue" aria-hidden="true">
+        <span>scroll</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 2 — TECH STACK ECOSYSTEM
+       ═══════════════════════════════════════ -->
+  <section class="section stack-section" id="stack">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">// TECHNOLOGY</p>
+        <h2 class="section-title">Tech Stack &amp; Ecosystem</h2>
+        <p class="section-subtitle">
+          The tools, languages, and paradigms I work with daily — organized by mastery depth.
+        </p>
+      </div>
+
+      <div class="stack-grid">
+
+        <!-- Category 1: Core Languages -->
+        <div class="stack-category" id="stack-cat-1">
+          <div class="stack-cat-header">
+            <div class="stack-cat-icon">
+              <i data-lucide="code-2"></i>
+            </div>
+            <div>
+              <h3 class="stack-cat-title">Core Languages</h3>
+              <p class="stack-cat-desc">Primary programming languages I reason and build in.</p>
+            </div>
+          </div>
+          <div class="stack-items">
+            <div class="stack-item" data-tooltip="Low-level programming, manual memory management, pointers">
+              <div class="stack-item-icon icon-c">C</div>
+              <div class="stack-item-info">
+                <span class="stack-item-name">C Language</span>
+                <span class="stack-item-tag">Systems · Foundation</span>
+              </div>
+              <div class="stack-item-level">
+                <div class="level-bar"><div class="level-fill" style="--level: 78%"></div></div>
+              </div>
+            </div>
+            <div class="stack-item" data-tooltip="Data analysis, scripting, automation, and algorithms">
+              <div class="stack-item-icon icon-py">Py</div>
+              <div class="stack-item-info">
+                <span class="stack-item-name">Python</span>
+                <span class="stack-item-tag">Scripting · Logic</span>
+              </div>
+              <div class="stack-item-level">
+                <div class="level-bar"><div class="level-fill" style="--level: 82%"></div></div>
+              </div>
+            </div>
+            <div class="stack-item" data-tooltip="OOP paradigms, class hierarchies, and enterprise patterns">
+              <div class="stack-item-icon icon-java">Jv</div>
+              <div class="stack-item-info">
+                <span class="stack-item-name">Java</span>
+                <span class="stack-item-tag">OOP · Typing</span>
+              </div>
+              <div class="stack-item-level">
+                <div class="level-bar"><div class="level-fill" style="--level: 65%"></div></div>
+              </div>
+            </div>
+            <div class="stack-item" data-tooltip="Front-end logic, DOM manipulation, async patterns">
+              <div class="stack-item-icon icon-js">JS</div>
+              <div class="stack-item-info">
+                <span class="stack-item-name">JavaScript</span>
+                <span class="stack-item-tag">Web · Interactivity</span>
+              </div>
+              <div class="stack-item-level">
+                <div class="level-bar"><div class="level-fill" style="--level: 88%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Tools & Version Control -->
+        <div class="stack-category" id="stack-cat-2">
+          <div class="stack-cat-header">
+            <div class="stack-cat-icon">
+              <i data-lucide="git-branch"></i>
+            </div>
+            <div>
+              <h3 class="stack-cat-title">Tools &amp; Version Control</h3>
+              <p class="stack-cat-desc">Dev infrastructure, environment, and workflow tools.</p>
+            </div>
+          </div>
+          <div class="stack-items">
+            <div class="stack-item" data-tooltip="Branch strategy, commit hygiene, merge conflict resolution">
+              <div class="stack-item-icon icon-git">Git</div>
+              <div class="stack-item-info">
+                <span class="stack-item-name">Git</span>
+                <span class="stack-item-tag">VCS · Workflow</span>
+              </div>
+              <div class="stack-item-level">
+                <div class="level-bar"><div class="level-fill" style="--level: 85%"></div></div>
+              </div>
+            </div>
+            <div class="stack-item" data-tooltip="Remote repos, Issues, pull requests, GitHub Pages">
+              <div class="stack-item-icon icon-gh">GH</div>
+              <div class="stack-item-info">
+                <span class="stack-item-name">GitHub</span>
+                <span class="stack-item-tag">Collaboration · CI</span>
+              </div>
+              <div class="stack-item-level">
+                <div class="level-bar"><div class="level-fill" style="--level: 83%"></div></div>
+              </div>
+            </div>
+            <div class="stack-item" data-tooltip="Shell scripting, file system, process management">
+              <div class="stack-item-icon icon-bash">$_</div>
+              <div class="stack-item-info">
+                <span class="stack-item-name">Bash / Linux CLI</span>
+                <span class="stack-item-tag">Shell · Automation</span>
+              </div>
+              <div class="stack-item-level">
+                <div class="level-bar"><div class="level-fill" style="--level: 70%"></div></div>
+              </div>
+            </div>
+            <div class="stack-item" data-tooltip="Debugging, profiling, heap inspection, GDB basics">
+              <div class="stack-item-icon icon-gdb">GDB</div>
+              <div class="stack-item-info">
+                <span class="stack-item-name">GDB / Debuggers</span>
+                <span class="stack-item-tag">Debug · Profiling</span>
+              </div>
+              <div class="stack-item-level">
+                <div class="level-bar"><div class="level-fill" style="--level: 55%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Currently Deep-Diving Into -->
+        <div class="stack-category stack-category-dive" id="stack-cat-3">
+          <div class="stack-cat-header">
+            <div class="stack-cat-icon stack-cat-icon-glow">
+              <i data-lucide="zap"></i>
+            </div>
+            <div>
+              <h3 class="stack-cat-title">Currently Deep-Diving Into</h3>
+              <p class="stack-cat-desc">Active learning tracks — building conceptual depth right now.</p>
+            </div>
+          </div>
+          <div class="dive-items">
+            <div class="dive-item">
+              <div class="dive-icon"><i data-lucide="binary"></i></div>
+              <div class="dive-info">
+                <span class="dive-name">Data Structures &amp; Algorithms</span>
+                <span class="dive-desc">Arrays, Linked Lists, Trees, Sorting, Searching, Complexity Analysis</span>
+                <div class="dive-progress-bar">
+                  <div class="dive-progress-fill" style="--progress: 72%"></div>
+                  <span class="dive-progress-label">72% through curriculum</span>
+                </div>
+              </div>
+            </div>
+            <div class="dive-item">
+              <div class="dive-icon"><i data-lucide="layers"></i></div>
+              <div class="dive-info">
+                <span class="dive-name">Object-Oriented Programming</span>
+                <span class="dive-desc">SOLID principles, inheritance, polymorphism, design patterns</span>
+                <div class="dive-progress-bar">
+                  <div class="dive-progress-fill" style="--progress: 65%"></div>
+                  <span class="dive-progress-label">65% through curriculum</span>
+                </div>
+              </div>
+            </div>
+            <div class="dive-item">
+              <div class="dive-icon"><i data-lucide="cpu"></i></div>
+              <div class="dive-info">
+                <span class="dive-name">Computer Architecture &amp; OS Concepts</span>
+                <span class="dive-desc">Memory models, process scheduling, virtual memory, system calls</span>
+                <div class="dive-progress-bar">
+                  <div class="dive-progress-fill" style="--progress: 48%"></div>
+                  <span class="dive-progress-label">48% through curriculum</span>
+                </div>
+              </div>
+            </div>
+            <div class="dive-item">
+              <div class="dive-icon"><i data-lucide="sigma"></i></div>
+              <div class="dive-info">
+                <span class="dive-name">Discrete Mathematics &amp; Logic</span>
+                <span class="dive-desc">Propositional logic, set theory, graph theory, proofs, combinatorics</span>
+                <div class="dive-progress-bar">
+                  <div class="dive-progress-fill" style="--progress: 60%"></div>
+                  <span class="dive-progress-label">60% through curriculum</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 3 — ENGINEERING PROJECTS
+       ═══════════════════════════════════════ -->
+  <section class="section projects-section" id="projects">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">// ENGINEERING CASE STUDIES</p>
+        <h2 class="section-title">Projects &amp; Builds</h2>
+        <p class="section-subtitle">
+          Not just descriptions — structured case studies with architecture decisions, challenges, and outcomes.
+        </p>
+      </div>
+
+      <div class="projects-list">
+
+        <!-- PROJECT CARD 1: ApexFinance Dashboard -->
+        <article class="project-case" id="project-1">
+          <div class="project-case-header">
+            <div class="project-case-meta">
+              <span class="project-number">01</span>
+              <div class="project-links-row">
+                <a href="https://github.com/Gowtham614941/AIFE" target="_blank" rel="noopener" class="project-link" title="GitHub Repository">
+                  <i data-lucide="github"></i> Source Code
+                </a>
+                <a href="#" class="project-link" title="Live Demo">
+                  <i data-lucide="external-link"></i> Live Demo
+                </a>
+              </div>
+            </div>
+            <div class="project-case-title-row">
+              <h3 class="project-case-title">ApexFinance — Personal Finance SPA</h3>
+              <span class="project-status-badge status-live">● Live</span>
+            </div>
+            <div class="project-tech-stack-row">
+              <span class="tech-pill">JavaScript ES6+</span>
+              <span class="tech-pill">HTML5</span>
+              <span class="tech-pill">Vanilla CSS</span>
+              <span class="tech-pill">Chart.js</span>
+              <span class="tech-pill">LocalStorage API</span>
+            </div>
+          </div>
+
+          <div class="project-case-body">
+            <!-- Problem Statement -->
+            <div class="case-block" id="case-1-problem">
+              <div class="case-block-icon"><i data-lucide="alert-circle"></i></div>
+              <div class="case-block-content">
+                <h4 class="case-block-title">Problem Statement</h4>
+                <p>Most personal finance tools are either bloated SaaS subscriptions or primitive spreadsheets. 
+                I needed a zero-dependency, client-side-only solution that demonstrates full SPA architecture — 
+                state management, reactive rendering, and persistent data — without a backend. 
+                The real problem was engineering correctness: how do you keep UI, data, and computed metrics 
+                in sync with zero framework overhead?</p>
+              </div>
+            </div>
+
+            <!-- Architecture -->
+            <div class="case-block" id="case-1-arch">
+              <div class="case-block-icon"><i data-lucide="git-merge"></i></div>
+              <div class="case-block-content">
+                <h4 class="case-block-title">System Architecture &amp; Tech Stack</h4>
+                <div class="arch-grid">
+                  <div class="arch-item">
+                    <span class="arch-label">State Layer</span>
+                    <span class="arch-val">Single source of truth array in <code>localStorage</code>, serialized as JSON on every mutation</span>
+                  </div>
+                  <div class="arch-item">
+                    <span class="arch-label">Rendering</span>
+                    <span class="arch-val">Custom reactive render loop — all UI derived from state, no direct DOM mutations on user events</span>
+                  </div>
+                  <div class="arch-item">
+                    <span class="arch-label">View Routing</span>
+                    <span class="arch-val">Hash-based SPA routing with history API; two independent view panels (Finance + Portfolio)</span>
+                  </div>
+                  <div class="arch-item">
+                    <span class="arch-label">Visualization</span>
+                    <span class="arch-val">Chart.js doughnut with dynamic dataset updates; graceful empty-state handling</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Challenges & Optimization -->
+            <div class="case-block" id="case-1-challenges">
+              <div class="case-block-icon"><i data-lucide="zap"></i></div>
+              <div class="case-block-content">
+                <h4 class="case-block-title">Key Technical Challenges &amp; Optimization</h4>
+                <ul class="challenge-list">
+                  <li>
+                    <span class="challenge-tag">Performance</span>
+                    Replaced full ledger re-render on every keystroke with debounced filter computation 
+                    (300ms delay) — reduced DOM operations by ~80% during live search.
+                  </li>
+                  <li>
+                    <span class="challenge-tag">State Integrity</span>
+                    Introduced UUID-based transaction IDs to decouple array indices from entity identity, 
+                    eliminating off-by-one errors during CRUD operations on filtered views.
+                  </li>
+                  <li>
+                    <span class="challenge-tag">Data Validation</span>
+                    Implemented client-side schema guards on all <code>localStorage</code> reads to prevent 
+                    runtime crashes from malformed data (e.g., corrupted entries from browser extensions).
+                  </li>
+                  <li>
+                    <span class="challenge-tag">CSV Export</span>
+                    Built a pure-JS CSV serializer that handles comma-escaping edge cases in description 
+                    fields — output is Excel-compatible without a library dependency.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Future Iterations -->
+            <div class="case-block" id="case-1-future">
+              <div class="case-block-icon"><i data-lucide="rocket"></i></div>
+              <div class="case-block-content">
+                <h4 class="case-block-title">Future Iterations</h4>
+                <div class="future-grid">
+                  <div class="future-item">
+                    <i data-lucide="database"></i>
+                    <span>IndexedDB migration for structured querying and transaction-safe writes</span>
+                  </div>
+                  <div class="future-item">
+                    <i data-lucide="cloud"></i>
+                    <span>Firebase Firestore sync for cross-device state persistence</span>
+                  </div>
+                  <div class="future-item">
+                    <i data-lucide="brain"></i>
+                    <span>ML-based spend categorization using a lightweight on-device classifier</span>
+                  </div>
+                  <div class="future-item">
+                    <i data-lucide="bell"></i>
+                    <span>Budget threshold alerts via Web Push Notifications API</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT CARD 2: CLI Student Study Tracker -->
+        <article class="project-case" id="project-2">
+          <div class="project-case-header">
+            <div class="project-case-meta">
+              <span class="project-number">02</span>
+              <div class="project-links-row">
+                <a href="#" class="project-link" title="GitHub Repository">
+                  <i data-lucide="github"></i> Source Code
+                </a>
+                <span class="project-link project-link-wip" title="In Progress">
+                  <i data-lucide="clock"></i> In Progress
+                </span>
+              </div>
+            </div>
+            <div class="project-case-title-row">
+              <h3 class="project-case-title">StudyOS — CLI Study Session Tracker in C</h3>
+              <span class="project-status-badge status-wip">◐ WIP</span>
+            </div>
+            <div class="project-tech-stack-row">
+              <span class="tech-pill">C Language</span>
+              <span class="tech-pill">File I/O</span>
+              <span class="tech-pill">Structs &amp; Pointers</span>
+              <span class="tech-pill">Dynamic Memory</span>
+              <span class="tech-pill">Linux CLI</span>
+            </div>
+          </div>
+
+          <div class="project-case-body">
+            <!-- Problem Statement -->
+            <div class="case-block" id="case-2-problem">
+              <div class="case-block-icon"><i data-lucide="alert-circle"></i></div>
+              <div class="case-block-content">
+                <h4 class="case-block-title">Problem Statement</h4>
+                <p>Digital study apps track time but never analyze <em>efficiency</em>. 
+                I wanted to build a systems-level tool that records study sessions, 
+                computes rolling averages of productive hours, and surfaces insights — 
+                all from the terminal. The constraint: implement it entirely in C, 
+                using manual memory management and flat-file persistence. 
+                This forces mastery of pointers, structs, and file I/O that higher-level 
+                languages abstract away.</p>
+              </div>
+            </div>
+
+            <!-- Architecture -->
+            <div class="case-block" id="case-2-arch">
+              <div class="case-block-icon"><i data-lucide="git-merge"></i></div>
+              <div class="case-block-content">
+                <h4 class="case-block-title">System Architecture &amp; Tech Stack</h4>
+                <div class="arch-grid">
+                  <div class="arch-item">
+                    <span class="arch-label">Data Model</span>
+                    <span class="arch-val"><code>struct Session</code> with subject, duration, timestamp, and productivity score fields</span>
+                  </div>
+                  <div class="arch-item">
+                    <span class="arch-label">Persistence</span>
+                    <span class="arch-val">Binary flat-file (<code>sessions.dat</code>) using <code>fwrite</code>/<code>fread</code> for O(1) append and full sequential scan</span>
+                  </div>
+                  <div class="arch-item">
+                    <span class="arch-label">Memory</span>
+                    <span class="arch-val">Dynamic array via <code>malloc</code>/<code>realloc</code> — doubling growth strategy to minimize heap reallocations</span>
+                  </div>
+                  <div class="arch-item">
+                    <span class="arch-label">Interface</span>
+                    <span class="arch-val">ANSI-escape-code terminal UI with colored output, progress bars, and formatted tabular reports</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Challenges & Optimization -->
+            <div class="case-block" id="case-2-challenges">
+              <div class="case-block-icon"><i data-lucide="zap"></i></div>
+              <div class="case-block-content">
+                <h4 class="case-block-title">Key Technical Challenges &amp; Optimization</h4>
+                <ul class="challenge-list">
+                  <li>
+                    <span class="challenge-tag">Memory Safety</span>
+                    Implemented a custom bounds-checked array wrapper to catch buffer overflows — 
+                    caught 3 silent memory corruption bugs that would have been invisible in Python.
+                  </li>
+                  <li>
+                    <span class="challenge-tag">Complexity</span>
+                    Optimized weekly-average computation from O(N²) naive double-loop to O(N) 
+                    single-pass using a sliding accumulator — critical for large session histories.
+                  </li>
+                  <li>
+                    <span class="challenge-tag">Sorting</span>
+                    Implemented in-place qsort with a custom comparator for multi-field sort 
+                    (primary: date, secondary: subject name) without allocating a secondary buffer.
+                  </li>
+                  <li>
+                    <span class="challenge-tag">Edge Cases</span>
+                    Handled file corruption gracefully: magic-number header validation rejects 
+                    malformed <code>.dat</code> files before heap allocation occurs.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Future Iterations -->
+            <div class="case-block" id="case-2-future">
+              <div class="case-block-icon"><i data-lucide="rocket"></i></div>
+              <div class="case-block-content">
+                <h4 class="case-block-title">Future Iterations</h4>
+                <div class="future-grid">
+                  <div class="future-item">
+                    <i data-lucide="network"></i>
+                    <span>Unix socket IPC for a companion background daemon to track idle time</span>
+                  </div>
+                  <div class="future-item">
+                    <i data-lucide="bar-chart-2"></i>
+                    <span>ASCII chart rendering for weekly productivity heatmaps in-terminal</span>
+                  </div>
+                  <div class="future-item">
+                    <i data-lucide="share-2"></i>
+                    <span>JSON export mode for data ingestion into external dashboards</span>
+                  </div>
+                  <div class="future-item">
+                    <i data-lucide="shield"></i>
+                    <span>Multi-user mode with file-level locking (<code>flock</code>) for concurrent access</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 4 — DEVLOG (Technical Blog)
+       ═══════════════════════════════════════ -->
+  <section class="section devlog-section" id="devlog">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">// THE DEVLOG</p>
+        <h2 class="section-title">Learning in Public</h2>
+        <p class="section-subtitle">
+          Technical writing as a first-class engineering skill. 
+          I document my mental models, not just my code.
+        </p>
+      </div>
+
+      <div class="devlog-grid">
+
+        <article class="devlog-card" id="devlog-1">
+          <div class="devlog-card-header">
+            <span class="devlog-tag">C · Systems</span>
+            <span class="devlog-read-time"><i data-lucide="clock"></i> 8 min read</span>
+          </div>
+          <div class="devlog-number">01</div>
+          <h3 class="devlog-title">
+            Demystifying Pointers in C: A Mental Model That Actually Works
+          </h3>
+          <p class="devlog-excerpt">
+            Most tutorials show you the <code>*</code> syntax. None of them give you 
+            the right mental model. Here's how I think about pointers as "labeled 
+            addresses in a warehouse" — and why that framing finally made 
+            double-pointers and pointer arithmetic click.
+          </p>
+          <div class="devlog-topics">
+            <span class="devlog-topic">Pointer arithmetic</span>
+            <span class="devlog-topic">Stack vs heap</span>
+            <span class="devlog-topic">Memory addresses</span>
+          </div>
+          <div class="devlog-footer">
+            <span class="devlog-status coming-soon">Coming Soon</span>
+            <button class="devlog-notify-btn" data-post="1" id="notify-btn-1">
+              <i data-lucide="bell"></i> Notify Me
+            </button>
+          </div>
+        </article>
+
+        <article class="devlog-card devlog-card-featured" id="devlog-2">
+          <div class="devlog-card-header">
+            <span class="devlog-tag devlog-tag-accent">DSA · Algorithms</span>
+            <span class="devlog-read-time"><i data-lucide="clock"></i> 12 min read</span>
+          </div>
+          <div class="devlog-number">02</div>
+          <h3 class="devlog-title">
+            Moving Beyond Loops: My First Encounter with Recursion and the Call Stack
+          </h3>
+          <p class="devlog-excerpt">
+            Recursion confused me for months — not because the code was complex, 
+            but because I was visualizing it wrong. This is a walkthrough of how 
+            I used call-stack diagrams to understand base cases, unwinding, 
+            and why tail recursion matters for memory.
+          </p>
+          <div class="devlog-topics">
+            <span class="devlog-topic">Call stack</span>
+            <span class="devlog-topic">Base case design</span>
+            <span class="devlog-topic">Tail recursion</span>
+            <span class="devlog-topic">Stack overflow</span>
+          </div>
+          <div class="devlog-footer">
+            <span class="devlog-status coming-soon">Coming Soon</span>
+            <button class="devlog-notify-btn" data-post="2" id="notify-btn-2">
+              <i data-lucide="bell"></i> Notify Me
+            </button>
+          </div>
+        </article>
+
+        <article class="devlog-card" id="devlog-3">
+          <div class="devlog-card-header">
+            <span class="devlog-tag">OOP · Design</span>
+            <span class="devlog-read-time"><i data-lucide="clock"></i> 10 min read</span>
+          </div>
+          <div class="devlog-number">03</div>
+          <h3 class="devlog-title">
+            Why Big-O Isn't About Speed — A First-Year Student's Reckoning with Asymptotic Analysis
+          </h3>
+          <p class="devlog-excerpt">
+            "O(N²) is slow and O(N) is fast" — a dangerously incomplete mental model. 
+            I break down what asymptotic analysis actually measures, why constant factors 
+            matter in practice, and the moment I realized that a well-optimized O(N²) 
+            can outperform a naive O(N log N) on small datasets.
+          </p>
+          <div class="devlog-topics">
+            <span class="devlog-topic">Big-O notation</span>
+            <span class="devlog-topic">Time complexity</span>
+            <span class="devlog-topic">Benchmarking</span>
+          </div>
+          <div class="devlog-footer">
+            <span class="devlog-status coming-soon">Coming Soon</span>
+            <button class="devlog-notify-btn" data-post="3" id="notify-btn-3">
+              <i data-lucide="bell"></i> Notify Me
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="devlog-cta" id="devlog-cta">
+        <p>The DevLog launches when the first post is complete. Subscribe to be notified.</p>
+        <div class="devlog-subscribe-form">
+          <div class="subscribe-input-wrapper">
+            <i data-lucide="mail"></i>
+            <input type="email" id="subscribe-email" placeholder="your@email.com">
+          </div>
+          <button class="btn btn-primary" id="btn-subscribe">
+            <i data-lucide="bell"></i> Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 5 — ROADMAP
+       ═══════════════════════════════════════ -->
+  <section class="section roadmap-section" id="roadmap">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-eyebrow">// SYSTEMS I WANT TO BUILD</p>
+        <h2 class="section-title">Technical Roadmap · Year 2</h2>
+        <p class="section-subtitle">
+          A forward-looking engineering roadmap — milestones I'm committed to hitting, 
+          sorted by priority and learning dependency.
+        </p>
+      </div>
+
+      <div class="roadmap-timeline" id="roadmap-timeline">
+
+        <div class="roadmap-item roadmap-q1" id="roadmap-item-1">
+          <div class="roadmap-connector">
+            <div class="roadmap-dot roadmap-dot-active"></div>
+            <div class="roadmap-line"></div>
+          </div>
+          <div class="roadmap-card">
+            <div class="roadmap-card-header">
+              <span class="roadmap-quarter">Q1 — Semester 3</span>
+              <span class="roadmap-priority priority-critical">Critical</span>
+            </div>
+            <h3 class="roadmap-milestone">Advanced DSA Mastery</h3>
+            <p class="roadmap-desc">
+              Complete graphs (BFS/DFS/Dijkstra), dynamic programming, 
+              segment trees, and heaps. Solve 150+ LeetCode problems with 
+              emphasis on space-time tradeoff analysis.
+            </p>
+            <div class="roadmap-deliverables">
+              <span class="deliverable"><i data-lucide="check-circle-2"></i> Graph algorithm implementations in C/Python</span>
+              <span class="deliverable"><i data-lucide="check-circle-2"></i> 150 LeetCode problems solved (Medium/Hard)</span>
+              <span class="deliverable"><i data-lucide="check-circle-2"></i> Personal DSA cheat sheet published</span>
+            </div>
+            <div class="roadmap-tags">
+              <span class="roadmap-tag">DSA</span>
+              <span class="roadmap-tag">LeetCode</span>
+              <span class="roadmap-tag">Problem Solving</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="roadmap-item roadmap-q2" id="roadmap-item-2">
+          <div class="roadmap-connector">
+            <div class="roadmap-dot"></div>
+            <div class="roadmap-line"></div>
+          </div>
+          <div class="roadmap-card">
+            <div class="roadmap-card-header">
+              <span class="roadmap-quarter">Q2 — Semester 3</span>
+              <span class="roadmap-priority priority-high">High</span>
+            </div>
+            <h3 class="roadmap-milestone">System Design Fundamentals</h3>
+            <p class="roadmap-desc">
+              Study scalability primitives: load balancing, caching (LRU/LFU), 
+              database sharding, CAP theorem, and consistent hashing. 
+              Design and document 5 real-world systems from scratch.
+            </p>
+            <div class="roadmap-deliverables">
+              <span class="deliverable"><i data-lucide="check-circle-2"></i> 5 system design case studies documented</span>
+              <span class="deliverable"><i data-lucide="check-circle-2"></i> Build an LRU cache implementation in C++</span>
+              <span class="deliverable"><i data-lucide="check-circle-2"></i> Study "Designing Data-Intensive Applications"</span>
+            </div>
+            <div class="roadmap-tags">
+              <span class="roadmap-tag">System Design</span>
+              <span class="roadmap-tag">Scalability</span>
+              <span class="roadmap-tag">Architecture</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="roadmap-item roadmap-q3" id="roadmap-item-3">
+          <div class="roadmap-connector">
+            <div class="roadmap-dot"></div>
+            <div class="roadmap-line"></div>
+          </div>
+          <div class="roadmap-card">
+            <div class="roadmap-card-header">
+              <span class="roadmap-quarter">Q3 — Semester 4</span>
+              <span class="roadmap-priority priority-high">High</span>
+            </div>
+            <h3 class="roadmap-milestone">Open Source Contributions</h3>
+            <p class="roadmap-desc">
+              Make meaningful contributions to 2+ active open-source repositories. 
+              Focus on documentation improvements, bug fixes, and feature additions 
+              in Python or JavaScript ecosystems.
+            </p>
+            <div class="roadmap-deliverables">
+              <span class="deliverable"><i data-lucide="check-circle-2"></i> 3 merged PRs to established repos</span>
+              <span class="deliverable"><i data-lucide="check-circle-2"></i> Publish a personal open-source library</span>
+              <span class="deliverable"><i data-lucide="check-circle-2"></i> Active GitHub contribution graph (green)</span>
+            </div>
+            <div class="roadmap-tags">
+              <span class="roadmap-tag">Open Source</span>
+              <span class="roadmap-tag">GitHub</span>
+              <span class="roadmap-tag">Collaboration</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="roadmap-item roadmap-q4" id="roadmap-item-4">
+          <div class="roadmap-connector">
+            <div class="roadmap-dot"></div>
+          </div>
+          <div class="roadmap-card">
+            <div class="roadmap-card-header">
+              <span class="roadmap-quarter">Q4 — Semester 4</span>
+              <span class="roadmap-priority priority-medium">Medium</span>
+            </div>
+            <h3 class="roadmap-milestone">Systems-Level Programming in C++</h3>
+            <p class="roadmap-desc">
+              Transition from C to C++: RAII, smart pointers, STL internals, 
+              move semantics, and concurrency primitives. Build a multi-threaded 
+              HTTP server from scratch as a capstone project.
+            </p>
+            <div class="roadmap-deliverables">
+              <span class="deliverable"><i data-lucide="check-circle-2"></i> Multi-threaded HTTP/1.1 server in C++</span>
+              <span class="deliverable"><i data-lucide="check-circle-2"></i> Custom memory allocator implementation</span>
+              <span class="deliverable"><i data-lucide="check-circle-2"></i> Thread-safe data structures library</span>
+            </div>
+            <div class="roadmap-tags">
+              <span class="roadmap-tag">C++</span>
+              <span class="roadmap-tag">Concurrency</span>
+              <span class="roadmap-tag">Systems</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 6 — FOOTER / CONNECT
+       ═══════════════════════════════════════ -->
+  <footer class="footer" id="contact">
+    <div class="footer-container">
+
+      <!-- Top connect section -->
+      <div class="footer-connect">
+        <div class="footer-connect-text">
+          <p class="footer-eyebrow">// LET'S BUILD SOMETHING</p>
+          <h2 class="footer-headline">
+            Open to internships, collaborations,<br>
+            and engineering conversations.
+          </h2>
+          <p class="footer-subtext">
+            Whether you have an opportunity, a technical question, or just want to talk 
+            about systems — my inbox is always open.
+          </p>
+        </div>
+
+        <!-- Primary email CTA -->
+        <div class="footer-email-cta" id="footer-email-cta">
+          <a href="mailto:gowtham@example.com" class="btn btn-primary btn-lg" id="footer-email-btn">
+            <i data-lucide="mail"></i> gowtham@example.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Developer links row -->
+      <div class="footer-links-grid" id="footer-links-grid">
+
+        <a href="https://github.com/Gowtham614941" target="_blank" rel="noopener" class="footer-link-card" id="footer-github">
+          <div class="footer-link-icon">
+            <i data-lucide="github"></i>
+          </div>
+          <div class="footer-link-info">
+            <span class="footer-link-label">GitHub</span>
+            <span class="footer-link-handle">@Gowtham614941</span>
+            <span class="footer-link-desc">Source code, projects &amp; contributions</span>
+          </div>
+          <i data-lucide="arrow-up-right" class="footer-link-arrow"></i>
+        </a>
+
+        <a href="https://linkedin.com/in/gowtham" target="_blank" rel="noopener" class="footer-link-card" id="footer-linkedin">
+          <div class="footer-link-icon footer-link-icon-linkedin">
+            <i data-lucide="linkedin"></i>
+          </div>
+          <div class="footer-link-info">
+            <span class="footer-link-label">LinkedIn</span>
+            <span class="footer-link-handle">Gowtham — BTech CSE</span>
+            <span class="footer-link-desc">Professional profile &amp; network</span>
+          </div>
+          <i data-lucide="arrow-up-right" class="footer-link-arrow"></i>
+        </a>
+
+        <a href="https://leetcode.com/gowtham" target="_blank" rel="noopener" class="footer-link-card" id="footer-leetcode">
+          <div class="footer-link-icon footer-link-icon-leet">
+            <i data-lucide="code-2"></i>
+          </div>
+          <div class="footer-link-info">
+            <span class="footer-link-label">LeetCode</span>
+            <span class="footer-link-handle">@gowtham</span>
+            <span class="footer-link-desc">DSA practice &amp; contest ratings</span>
+          </div>
+          <i data-lucide="arrow-up-right" class="footer-link-arrow"></i>
+        </a>
+
+        <a href="https://codechef.com/users/gowtham" target="_blank" rel="noopener" class="footer-link-card" id="footer-codechef">
+          <div class="footer-link-icon footer-link-icon-chef">
+            <i data-lucide="terminal"></i>
+          </div>
+          <div class="footer-link-info">
+            <span class="footer-link-label">CodeChef</span>
+            <span class="footer-link-handle">@gowtham</span>
+            <span class="footer-link-desc">Competitive programming contests</span>
+          </div>
+          <i data-lucide="arrow-up-right" class="footer-link-arrow"></i>
+        </a>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <div class="footer-brand">
+          <span class="brand-bracket">&lt;</span>
+          <span class="brand-name">Gowtham</span>
+          <span class="brand-bracket"> /&gt;</span>
+        </div>
+        <p class="footer-copy">
+          Engineered with intent. Built from first principles. 
+          <span class="footer-year">© 2026</span>
+        </p>
+        <div class="footer-bottom-links">
+          <a href="#hero">Back to top ↑</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Toast notification container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- JS -->
+  <script src="portfolio.js"></script>
+</body>
+</html>
